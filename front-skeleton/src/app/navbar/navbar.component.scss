@@ -2,12 +2,14 @@
 
 nav {
   height: 80px;
-  background: linear-gradient(to right, theme.$common-purple, theme.$common-red);
+  background: white;
 
   div {
     height: 100%;
     display: flex;
     align-items: center;
+    background-color: black;
+
 
     img {
       margin-left: 20px;
@@ -25,12 +27,13 @@ mat-nav-list {
   margin-left: 50px;
   display: flex;
   flex-direction: row;
-  width: 250px;
+  width: auto;
 
   span,
   a {
-    font-size: large;
+    font-size: 16px;
     color: theme.$white;
+    margin-right: 20px;
     transition: 0.3s;
 
     &:hover {

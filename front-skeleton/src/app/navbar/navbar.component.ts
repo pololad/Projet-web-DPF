@@ -12,5 +12,11 @@ export class NavbarComponent {
   constructor() {
     this.links.push({ name: "Étudiants", href: "etudiants" })
     this.links.push({ name: "Filières", href: "filieres" })
+    this.links.push({name:"Test", href: "tester"})
+    this.links.push({name:"A propos", href: "apropos"})
+    this.links.push({name:"Formation", href: "formations"})
+    this.links.push({name:"Prix", href: "prix"})
+    this.links.push({name:"Contacter", href: "cont"})
   }
 }
+
