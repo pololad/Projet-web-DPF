@@ -11,6 +11,7 @@ INSERT INTO majors (id, name, description) VALUES (9, 'Design Industriel Durable
 INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (1, 'Paul', 'Harrohide', '2002-06-15', 1);
 INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (2, 'Jean', 'Bonbeur', '2001-08-21', 1);
 INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (3, 'Alain', 'Térieur', '2000-01-11', 1);
+INSERT INTO students (id, first_name, last_name, birthdate, major_id) VALUES (5, 'Paul', 'Mardhel', '2002-04-28', 7);
 
 INSERT INTO courses (id, name, hours) VALUES (1, 'Spanish', 30);
 INSERT INTO courses (id, name, hours) VALUES (2, 'German', 30);
@@ -22,4 +23,12 @@ INSERT INTO courses (id, name, hours) VALUES (7, 'Java', 30);
 INSERT INTO courses (id, name, hours) VALUES (8, 'Lean Management', 30);
 INSERT INTO student_course (id, student_id, course_id) VALUES (1, 1, 7);
 
+INSERT INTO  status (id,name) VALUES (1,'étudiant(e)');
+INSERT INTO  status (id,name) VALUES (2,'basique');
+INSERT INTO  status (id,name) VALUES (3,'Administrateur');
+
+
+INSERT INTO  clients(id, first_name, last_name, birthdate, status_id) VALUES (1,'Paul','Mardhel','2002-04-28',1);
+INSERT INTO  clients(id, first_name, last_name, birthdate, status_id) VALUES (2,'Francesca','Monterastelli','2002-05-01',2);
+INSERT INTO  clients(id, first_name, last_name, birthdate, status_id) VALUES (3,'Delphine','Lereau','2001-08-08',3);
 
