@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class ClientController {
+    private int test;
     private final ClientService clientService;
     @GetMapping("")
     public List<Client> listClients(@RequestParam(required = false) Integer statusId, @RequestParam(required = false) Integer offerId) {
