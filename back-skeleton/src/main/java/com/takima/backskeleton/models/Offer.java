@@ -18,11 +18,12 @@ import java.util.List;
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         private String difficulty;
-        private Instant begindate;
-        private Instant endingdate;
+        private Instant begin_date;
+        private Instant ending_date;
+        private String name;
         @ManyToMany(mappedBy = "offers")
         @JsonIgnore
-        List<Client> clients;
+        List<Student> students;
 
     }
 

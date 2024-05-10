@@ -8,7 +8,7 @@
       <th scope="col">Nom</th>
       <th scope="col">Prénom</th>
       <th scope="col">Date de naissance</th>
-      <th scope="col">Filière</th>
+      <th scope="col">Status</th>
       <th scope="col">Supprimer</th>
     </tr>
   </thead>
@@ -18,7 +18,7 @@
       <td>{{ student.lastName }}</td>
       <td>{{ student.firstName }}</td>
       <td>{{ student.birthdate | date : "dd/MM/yyyy" }}</td>
-      <td>{{ student.major!!.name }}</td>
+      <td>{{ student.status!!.name }}</td>
       <td>
         <button mat-icon-button color="warn" (click)="deleteStudent($event, student)">
           <mat-icon>delete</mat-icon>

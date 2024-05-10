@@ -16,9 +16,9 @@ import java.util.List;
 public class StudentController {
     private final StudentService studentService;
     @GetMapping("")
-    public List<Student> listStudents(@RequestParam(required = false) Integer majorId, @RequestParam(required = false) Integer courseId) {
-        if (majorId != null && courseId !=null) {
-            return studentService.searchByMajorAndCourse(majorId, courseId);
+    public List<Student> listStudents(@RequestParam(required = false) Integer statusId, @RequestParam(required = false) Integer offerId) {
+        if (statusId != null && offerId !=null) {
+            return studentService.searchByStatusAndOffer(statusId, offerId);
         }
         return studentService.findAll();
     }

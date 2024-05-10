@@ -60,7 +60,7 @@ public class StudentService {
         studentDao.save(student);
     }
 
-    public List<Student> searchByMajorAndCourse(int majorId, int courseId) {
-        return studentDao.findByMajorIdAndCourseId(majorId, courseId);
+    public List<Student> searchByStatusAndOffer(int statusId, int offerId) {
+        return studentDao.findByStatusIdAndOfferId(statusId, offerId);
     }
 }

@@ -11,8 +11,8 @@ public class StudentMapper {
                 .firstName(dto.getFirstName())
                 .lastName(dto.getLastName())
                 .birthdate(dto.getBirthdate())
-                .courses(dto.getCourses())
-                .major(dto.getMajor())
+                .offers(dto.getOffers())
+                .status(dto.getStatus())
                 .build();
     }
 
@@ -21,8 +21,8 @@ public class StudentMapper {
                 .firstName(student.getFirstName())
                 .lastName(student.getLastName())
                 .birthdate(student.getBirthdate())
-                .courses(student.getCourses())
-                .major(student.getMajor())
+                .offers(student.getOffers())
+                .status(student.getStatus())
                 .build();
     }
 }

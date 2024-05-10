@@ -12,8 +12,8 @@ import { StudentDetailsComponent } from "students/student-details/student-detail
 import { FormsModule } from "@angular/forms"
 import { MatIconModule } from "@angular/material/icon"
 import { MatButtonModule } from "@angular/material/button"
-import { MajorsComponent } from "majors/majors.component"
-import { MajorStudentsComponent } from "majors/major-students/major-students.component"
+import { StatusesComponent } from "statuses/statuses.component"
+import {StatusStudentsComponent} from "./statuses/status-students/status-students.component";
 import { HttpClientModule } from "@angular/common/http"
 import {TestComponent} from "./test/test.component";
 import {AboutComponent} from "./about/about.component";
@@ -29,8 +29,8 @@ import {ContactComponent} from "./contact/contact.component";
     HomeComponent,
     StudentsComponent,
     StudentDetailsComponent,
-    MajorsComponent,
-    MajorStudentsComponent,
+    StatusesComponent,
+    StatusStudentsComponent,
     AboutComponent,
     FormationComponent,
     PriceComponent,

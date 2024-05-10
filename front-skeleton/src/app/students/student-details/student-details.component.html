@@ -46,40 +46,40 @@
       La Date de naissance est obligatoire
     </div>
   </div>
-  @if (allMajors$ | async; as allMajors) {
+  @if (allStatuses$ | async; as allStatuses) {
   <div class="form-group">
-    <label for="major">Major</label>
-    <select id="major" [(ngModel)]="majorSelectModel" name="majors" class="form-control">
-      <option [ngValue]="null" [disabled]="true">Sélectionner une filière</option>
-      @for (major of allMajors; track major) {
-      <option [ngValue]="major">{{ major.name }}</option>
+    <label for="status">Status</label>
+    <select id="status" [(ngModel)]="statusSelectModel" name="statuses" class="form-control">
+      <option [ngValue]="null" [disabled]="true">Sélectionner un status</option>
+      @for (status of allStatuses; track status) {
+      <option [ngValue]="status">{{ status.name }}</option>
       }
     </select>
   </div>
   }
   <div class="student-courses">
     <div class="d-flex align-items-center">
-      <h3 class="courses-title">Cours</h3>
-      <button type="button" mat-mini-fab color="primary" (click)="courseClick()">
+      <h3 class="offers-title">Offre</h3>
+      <button type="button" mat-mini-fab color="primary" (click)="offerClick()">
         <mat-icon>add</mat-icon>
       </button>
     </div>
-    @if (allCourses$ | async; as allCourses) {
+    @if (allOffers$ | async; as allOffers) {
     <div class="form-group">
-      <label for="courses">Cours disponibles</label>
-      <select id="courses" [(ngModel)]="courseSelectModel" name="courses" class="form-control">
-        <option [ngValue]="null" [disabled]="true">Sélectionner un cours</option>
-        @for (course of allCourses; track course) {
-        <option [ngValue]="course">{{ course.name }}</option>
+      <label for="offers">offres disponibles</label>
+      <select id="offers" [(ngModel)]="offerSelectModel" name="offers" class="form-control">
+        <option [ngValue]="null" [disabled]="true">Sélectionner une offre</option>
+        @for (offer of allOffers; track offer) {
+        <option [ngValue]="offer">{{ offer.name }}</option>
         }
       </select>
-      @if (notSelectedCourse) {
-      <div class="alert alert-danger">Le cours est obligatoire</div>
+      @if (notSelectedOffer) {
+      <div class="alert alert-danger">L'offre est obligatoire</div>
       }
       <button
         type="button"
-        [disabled]="courseSelectModel == null"
-        (click)="addCourseToStudent(student)"
+        [disabled]="offerSelectModel == null"
+        (click)="addOfferToStudent(student)"
         mat-raised-button
         color="primary"
       >
@@ -89,12 +89,11 @@
     }
     <table class="table">
       <tbody>
-        @for (course of student.courses; track course) {
+        @for (offer of student.offers; track offer) {
         <tr>
-          <td>{{ course?.name }}</td>
-          <td>{{ course?.hours }}</td>
+          <td>{{ offer?.name }}</td>
           <td>
-            <button mat-icon-button color="warn" (click)="removeCourseToStudent(student, course)">
+            <button mat-icon-button color="warn" (click)="removeOfferToStudent(student, offer)">
               <mat-icon>delete</mat-icon>
             </button>
           </td>
