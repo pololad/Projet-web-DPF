@@ -15,7 +15,7 @@ export class NavbarComponent {
     this.links.push({ name: "Client", href: "etudiants" })
     this.links.push({name:"Cours", href: "tester"})
     this.links.push({name:"Tarifs", href: "prix"})
-    this.links.push({name:"Mail", href: "cont"})
+    this.links.push({name:"Mails", href: "cont"})
     this.links.push({name:"Status",href:"statuses"})
   }
 }
