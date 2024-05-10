@@ -1,6 +1,6 @@
 INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (1,'Sensibilisation RGPD','facile','12-12-2024','12-12-2025');
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (2,'Sensibilisation RGPD','difficile','12-12-2024','12-12-2025');
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (3,'Sensibilisation RGPD','intermédiaire','12-12-2024','12-12-2025');
+INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (2,'Sensibilisation RGPD','intermédiaire','12-12-2024','12-12-2025');
+INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (3,'Sensibilisation RGPD','difficile','12-12-2024','12-12-2025');
 
 INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (4,'Sensibilisation Pentest','facile','12-12-2024','12-12-2025');
 INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (5,'Sensibilisation Pentest','intermédiaire','12-12-2024','12-12-2025');
