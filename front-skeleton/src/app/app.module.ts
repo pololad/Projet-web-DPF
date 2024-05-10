@@ -35,6 +35,7 @@ import {ContactComponent} from "./contact/contact.component";
     FormationComponent,
     PriceComponent,
     ContactComponent,
+
   ],
   imports: [
     BrowserModule,
