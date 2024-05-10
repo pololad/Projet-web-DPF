@@ -8,6 +8,7 @@ public class StudentMapper {
     public static Student fromDto(StudentDto dto, Long id) throws IOException {
         return new Student.Builder()
                 .id(id)
+                .password(dto.getPassword())
                 .firstName(dto.getFirstName())
                 .lastName(dto.getLastName())
                 .birthdate(dto.getBirthdate())
@@ -18,6 +19,7 @@ public class StudentMapper {
 
     public static StudentDto toDto (Student student){
         return StudentDto.builder()
+                .password(student.getPassword())
                 .firstName(student.getFirstName())
                 .lastName(student.getLastName())
                 .birthdate(student.getBirthdate())

@@ -9,4 +9,5 @@ export interface Student {
   birthdate?: Date
   offers?: Offer[]
   status: Status
+  password : string
 }

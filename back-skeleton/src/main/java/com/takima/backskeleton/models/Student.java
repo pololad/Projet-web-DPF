@@ -18,6 +18,7 @@ public class Student {
     @Column(name = "last_name")
     private String lastName;
     private Instant birthdate;
+    private String password;
     @ManyToMany
     @JoinTable(
             name = "student_offer",
@@ -35,6 +36,7 @@ public class Student {
         this.birthdate = builder.birthdate;
         this.offers = builder.offers;
         this.status = builder.status;
+        this.password = builder.password;
     }
     public Student() {
     }
@@ -46,12 +48,15 @@ public class Student {
         private Instant birthdate;
         private List<Offer> offers;
         private Status status;
-
+        private String password;
         public Builder id (Long id) {
             this.id = id;
             return this;
         }
-
+        public Builder password(String password){
+            this.password = password;
+            return this;
+        }
         public Builder firstName(String firstName) {
             this.firstName = firstName;
             return this;

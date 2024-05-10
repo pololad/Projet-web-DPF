@@ -15,4 +15,5 @@ public class StudentDto {
     private Instant birthdate;
     private List<Offer> offers;
     private Status status;
+    private String password;
 }

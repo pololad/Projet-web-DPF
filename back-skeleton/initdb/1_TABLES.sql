@@ -13,6 +13,7 @@ create table students
     last_name TEXT not null,
     birthdate date null,
     status_id int null,
+    password text not null,
     image bytea null
 );
 

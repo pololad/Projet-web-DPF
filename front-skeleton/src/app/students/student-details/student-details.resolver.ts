@@ -10,7 +10,7 @@ export const StudentDetailsResolver: ResolveFn<Student> = (
 ) => {
   if (route.params["id"] == "new") {
     return new Observable((observer) => {
-      observer.next({ firstName: "", lastName: "", status: { name: "", students: [] } })
+      observer.next({ firstName: "", lastName: "", password:"", status: { name: "", students: [] } })
     })
   }
   return inject(StudentService).findById(parseInt(route.params["id"], 10))
