@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "courses")
+@Table(name ="status")
 @NoArgsConstructor
 @Getter
 public class Status{
@@ -18,5 +18,5 @@ public class Status{
     private String name;
     @OneToMany(mappedBy = "status")
     @JsonIgnore
-    List<Client> clients;
+    List<Student> students;
 }

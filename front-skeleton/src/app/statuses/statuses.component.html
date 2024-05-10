@@ -1,0 +1,18 @@
+<div class="d-flex align-items-center">
+  <h1>Status</h1>
+</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (status of statuses$ | async; track status) {
+
+      <td>{{ status.students }}</td>
+
+
+    }
+  </tbody>
+</table>

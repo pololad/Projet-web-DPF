@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface StudentDao extends JpaRepository<Student, Long> {
-    @Query("SELECT s FROM Student s JOIN s.courses c WHERE c.id= :courseId AND s.major.id = :majorId ")
-    List<Student> findByMajorIdAndCourseId(int majorId, int courseId);
+    @Query("SELECT s FROM Student s JOIN s.offers c WHERE c.id= :offerId AND s.status.id = :statusId ")
+    List<Student> findByStatusIdAndOfferId(int statusId, int offerId);
 }

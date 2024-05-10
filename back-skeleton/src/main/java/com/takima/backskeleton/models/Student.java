@@ -18,23 +18,25 @@ public class Student {
     @Column(name = "last_name")
     private String lastName;
     private Instant birthdate;
+    private String password;
     @ManyToMany
     @JoinTable(
-            name = "student_course",
+            name = "student_offer",
             joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "course_id"))
-    private List<Course> courses;
+            inverseJoinColumns = @JoinColumn(name = "offer_id"))
+    private List<Offer> offers;
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "major_id")
-    private Major major;
+    @JoinColumn(name = "status_id")
+    private Status status;
 
     private Student(Builder builder) {
         this.id = builder.id;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.birthdate = builder.birthdate;
-        this.courses = builder.courses;
-        this.major = builder.major;
+        this.offers = builder.offers;
+        this.status = builder.status;
+        this.password = builder.password;
     }
     public Student() {
     }
@@ -44,14 +46,17 @@ public class Student {
         private String firstName;
         private String lastName;
         private Instant birthdate;
-        private List<Course> courses;
-        private Major major;
-
+        private List<Offer> offers;
+        private Status status;
+        private String password;
         public Builder id (Long id) {
             this.id = id;
             return this;
         }
-
+        public Builder password(String password){
+            this.password = password;
+            return this;
+        }
         public Builder firstName(String firstName) {
             this.firstName = firstName;
             return this;
@@ -60,12 +65,12 @@ public class Student {
             this.lastName = lastName;
             return this;
         }
-        public Builder courses(List<Course> courses) {
-            this.courses = courses;
+        public Builder offers(List<Offer> offers) {
+            this.offers = offers;
             return this;
         }
-        public Builder major(Major major) {
-            this.major = major;
+        public Builder status(Status status) {
+            this.status = status;
             return this;
         }
         public Builder birthdate(Instant birthdate) {

@@ -1,7 +1,8 @@
-import { Client } from "./client.model"
+
+import {Student} from "./student.model";
 
 export interface Status {
   id?: bigint
   name: string
-  client: Client[]
+  students: Student[]
 }

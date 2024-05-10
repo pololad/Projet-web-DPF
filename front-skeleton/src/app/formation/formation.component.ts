@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from "@angular/router"
 import { StudentService } from "services/student.service"
 import {Link} from "../models/links.model";
 @Component({
-  selector: "students",
+  selector: "formation",
   templateUrl: "./formation.component.html",
   styleUrls: ["./formation.component.scss"],
 })

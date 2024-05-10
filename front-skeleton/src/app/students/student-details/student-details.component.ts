@@ -2,11 +2,11 @@ import { Component } from "@angular/core"
 import { map, Observable } from "rxjs"
 import { Student } from "models/student.model"
 import { ActivatedRoute, Router } from "@angular/router"
-import { Course } from "models/course.model"
-import { CourseService } from "services/course.service"
+import {Offer } from "models/offer.model"
+import { OfferService } from "services/offer.service"
 import { StudentService } from "services/student.service"
-import { Major } from "../../models/major.model"
-import { MajorService } from "../../services/major.service"
+import { StatusService } from "../../services/status.service"
+import {Status} from "../../models/status.model";
 
 @Component({
   selector: "student-details",
@@ -15,44 +15,44 @@ import { MajorService } from "../../services/major.service"
 })
 export class StudentDetailsComponent {
   student$: Observable<Student> = this._route.data.pipe(map((data) => data["student"]))
-  allMajors$: Observable<Major[]> | undefined
-  allCourses$: Observable<Course[]> | undefined
-  majorSelectModel: Major | null = null
-  courseSelectModel: Course | null = null
-  notSelectedCourse: boolean | undefined
+  allStatuses$: Observable<Status[]> | undefined
+  allOffers$: Observable<Offer[]> | undefined
+  statusSelectModel: Status | null = null
+  offerSelectModel: Offer | null = null
+  notSelectedOffer: boolean | undefined
   today = new Date(Date.now())
 
   constructor(
     private _route: ActivatedRoute,
-    private courseService: CourseService,
+    private offerService: OfferService,
     private studentService: StudentService,
-    private majorService: MajorService,
+    private statusService: StatusService,
     private router: Router,
   ) {
-    this.allMajors$ = this.majorService.findAll()
+    this.allStatuses$ = this.statusService.findAll()
   }
 
-  courseClick() {
-    this.allCourses$ = this.courseService.findAll()
+  offerClick() {
+    this.allOffers$ = this.offerService.findAll()
   }
 
-  addCourseToStudent(student: Student) {
-    if (this.courseSelectModel != null) {
-      this.studentService.addCourseToStudent(student, this.courseSelectModel)
+  addOfferToStudent(student: Student) {
+    if (this.offerSelectModel != null) {
+      this.studentService.addOfferToStudent(student, this.offerSelectModel)
     } else {
-      this.notSelectedCourse = true
+      this.notSelectedOffer = true
     }
   }
 
-  removeCourseToStudent(student: Student, course: Course) {
-    this.studentService.removeCourseToStudent(student, course)
+  removeOfferToStudent(student: Student, offer: Offer) {
+    this.studentService.removeOfferToStudent(student, offer)
   }
 
   save(student: Student) {
     const id = this._route.snapshot.params["id"]
 
-    if (this.majorSelectModel !== null) {
-      student.major = this.majorSelectModel
+    if (this.statusSelectModel !== null) {
+      student.status = this.statusSelectModel
     }
 
     if (id == "new") {
