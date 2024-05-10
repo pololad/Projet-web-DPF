@@ -8,21 +8,23 @@ public class StudentMapper {
     public static Student fromDto(StudentDto dto, Long id) throws IOException {
         return new Student.Builder()
                 .id(id)
+                .password(dto.getPassword())
                 .firstName(dto.getFirstName())
                 .lastName(dto.getLastName())
                 .birthdate(dto.getBirthdate())
-                .courses(dto.getCourses())
-                .major(dto.getMajor())
+                .offers(dto.getOffers())
+                .status(dto.getStatus())
                 .build();
     }
 
     public static StudentDto toDto (Student student){
         return StudentDto.builder()
+                .password(student.getPassword())
                 .firstName(student.getFirstName())
                 .lastName(student.getLastName())
                 .birthdate(student.getBirthdate())
-                .courses(student.getCourses())
-                .major(student.getMajor())
+                .offers(student.getOffers())
+                .status(student.getStatus())
                 .build();
     }
 }

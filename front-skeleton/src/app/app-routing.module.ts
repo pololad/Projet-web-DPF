@@ -5,10 +5,10 @@ import { StudentsComponent } from "students/students.component"
 import { StudentsResolver } from "students/students.resolver"
 import { StudentDetailsComponent } from "students/student-details/student-details.component"
 import { StudentDetailsResolver } from "students/student-details/student-details.resolver"
-import { MajorsComponent } from "majors/majors.component"
-import { MajorsResolver } from "majors/majors.resolver"
-import { MajorStudentsResolver } from "majors/major-students/major-students.resolver"
-import { MajorStudentsComponent } from "majors/major-students/major-students.component"
+import { StatusesComponent } from "statuses/statuses.component"
+import { StatusesResolver } from "statuses/statuses.resolver"
+import {StatusStudentsResolver} from "./statuses/status-students/status-students.resolver";
+import {StatusStudentsComponent} from "./statuses/status-students/status-students.component";
 import {TestComponent} from "./test/test.component";
 import {AboutComponent} from "./about/about.component";
 import {FormationComponent} from "./formation/formation.component";
@@ -52,17 +52,17 @@ const routes: Routes = [
     },
   },
   {
-    path: "filieres",
-    component: MajorsComponent,
+    path: "statuses",
+    component: StatusesComponent,
     resolve: {
-      majors: MajorsResolver,
+      majors: StatusesResolver,
     },
   },
   {
-    path: "etudiants-filiere/:id",
-    component: MajorStudentsComponent,
+    path: "status-etudiants/:id",
+    component: StatusStudentsComponent,
     resolve: {
-      studentsFromMajor: MajorStudentsResolver,
+      studentsFromMajor: StatusStudentsResolver,
     },
   },
 ]

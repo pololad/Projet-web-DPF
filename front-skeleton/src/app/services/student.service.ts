@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core"
 import { Observable } from "rxjs"
 import { Student } from "models/student.model"
-import { Course } from "models/course.model"
+import { Offer } from "models/offer.model"
 import { HttpClient } from "@angular/common/http"
 
 @Injectable({
@@ -32,19 +32,19 @@ export class StudentService {
     return this.http.delete(`${this.studentsUrl}/${student.id}`)
   }
 
-  addCourseToStudent(student: Student, course: Course) {
-    if (student.courses == undefined) {
-      student.courses = [course]
+  addOfferToStudent(student: Student, offer: Offer) {
+    if (student.offers == undefined) {
+      student.offers = [offer]
     } else {
-      student.courses.push(course)
+      student.offers.push(offer)
     }
     return student
   }
 
-  removeCourseToStudent(student: Student, course: Course) {
-    const index = student.courses?.indexOf(course)
+  removeOfferToStudent(student: Student, offer: Offer) {
+    const index = student.offers?.indexOf(offer)
     if (index!! > -1) {
-      student.courses?.splice(index!!, 1)
+      student.offers?.splice(index!!, 1)
     }
     return student
   }

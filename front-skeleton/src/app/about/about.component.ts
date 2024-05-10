@@ -6,7 +6,7 @@ import { StudentService } from "services/student.service"
 import {Link} from "../models/links.model";
 
 @Component({
-  selector: "students",
+  selector: "about",
   templateUrl: "./about.component.html",
   styleUrls: ["./about.component.scss"],
 })

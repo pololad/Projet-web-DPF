@@ -2,7 +2,7 @@ package com.takima.backskeleton.services;
 
 import com.takima.backskeleton.DAO.StatusDao;
 import com.takima.backskeleton.models.Status;
-import com.takima.backskeleton.models.Client;
+import com.takima.backskeleton.models.Student;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -20,7 +20,7 @@ public class StatusService {
         return statuses;
     }
 
-    public List<Client> getClientsOfStatus(Long id) {
-        return statusDao.getAllClientFromStatus(id);
+    public List<Student> getStudentsOfStatus(Long id) {
+        return statusDao.getAllStudentFromStatus(id);
     }
 }
