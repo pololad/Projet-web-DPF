@@ -30,6 +30,7 @@ import {SelectionComponent} from "./Selection/selection";
     AppComponent,
     NavbarComponent,
     HomeComponent,
+    SelectionComponent,
     StudentsComponent,
     StudentDetailsComponent,
     StatusesComponent,
@@ -39,8 +40,7 @@ import {SelectionComponent} from "./Selection/selection";
     PriceComponent,
     ContactComponent,
     SigninComponent,
-    LoginComponent,
-    SelectionComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,8 @@
 import { Injectable } from "@angular/core"
-import { Observable } from "rxjs"
 import { Student } from "models/student.model"
 import { Offer } from "models/offer.model"
 import { HttpClient } from "@angular/common/http"
-
+import { Observable, BehaviorSubject } from "rxjs";
 @Injectable({
   providedIn: "root",
 })
@@ -11,6 +10,7 @@ export class StudentService {
   constructor(private http: HttpClient) {}
 
   private studentsUrl = "http://localhost:8080/students"
+  private currentStudentSubject: BehaviorSubject<Student | null> = new BehaviorSubject<Student | null>(null);
 
   findAll(): Observable<Student[]> {
     return this.http.get<Student[]>(this.studentsUrl)
@@ -48,11 +48,17 @@ export class StudentService {
     }
     return student
   }
-  authenticate(username: string, password: string): Observable<Student> {
-    // Construire le corps de la requête pour l'authentification
-    const body = { username, password };
 
-    // Envoyer une requête POST au backend pour l'authentification
+  setCurrentStudent(student: Student | null): void {
+    this.currentStudentSubject.next(student);
+  }
+
+  getCurrentStudent(): Observable<Student | null> {
+    return this.currentStudentSubject.asObservable();
+  }
+
+  authenticate(username: string, password: string): Observable<Student> {
+    const body = { username, password };
     return this.http.post<Student>(`${this.studentsUrl}/authenticate`, body);
   }
 }
