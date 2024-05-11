@@ -1,0 +1,105 @@
+/* styles.css */
+
+/* Réinitialisation des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles pour le conteneur de la page */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Styles pour la section de formation */
+.training-section {
+  background-color: #6a0f59;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+/* Styles pour le titre de la formation */
+.training-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styles pour les boutons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.start-training,
+.fund-training {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Styles pour la section CyberTraining */
+.cybertraining-section {
+  background-color: #eac7f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-top: 20px;
+}
+
+/* Styles pour le titre de la section CyberTraining */
+.cybertraining-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Styles pour les détails de la formation */
+.cybertraining-details {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Styles pour la liste des fonctionnalités */
+.features {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.features li {
+  margin-bottom: 5px;
+}
+
+/* Styles pour le bouton de téléchargement du programme */
+.download-program {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.centerh1 {
+  text-align: center;
+  background-color: #6a0f59;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
