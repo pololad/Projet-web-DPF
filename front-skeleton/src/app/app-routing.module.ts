@@ -31,6 +31,7 @@ import {SelectionexpertComponent} from "./selectionexpert/selectionexpert.compon
 import {ReglementinitComponent} from "./reglementinit/reglementinit.component";
 import {ReglementinterComponent} from "./reglementinter/reglementinter.component";
 import {ReglementexpertComponent} from "./reglementexpert/reglementexpert.component";
+import {SelectionComponent} from "./Selection/selection";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -72,10 +73,8 @@ const routes: Routes = [
 
   {
     path: "selection",
-    component: StatusesComponent,
-    resolve: {
-      majors: StatusesResolver,
-    },
+    component: SelectionComponent,
+
   },
   {
     path: "status-etudiants/:id",

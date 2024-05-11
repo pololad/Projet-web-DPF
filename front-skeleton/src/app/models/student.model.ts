@@ -10,4 +10,6 @@ export interface Student {
   offers?: Offer[]
   status: Status
   password : string
+
 }
+

@@ -39,6 +39,7 @@ import {ReglementexpertComponent} from "./reglementexpert/reglementexpert.compon
 import {ReglementinitComponent} from "./reglementinit/reglementinit.component";
 import {ReglementinterComponent} from "./reglementinter/reglementinter.component";
 
+
 @NgModule({
   declarations: [
     TestComponent,
@@ -70,7 +71,8 @@ import {ReglementinterComponent} from "./reglementinter/reglementinter.component
     Formationinit3Component,
     ReglementexpertComponent,
     ReglementinitComponent,
-    ReglementinterComponent
+    ReglementinterComponent,
+
   ],
   imports: [
     BrowserModule,
