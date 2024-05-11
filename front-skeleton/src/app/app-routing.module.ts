@@ -15,6 +15,7 @@ import {FormationComponent} from "./formation/formation.component";
 import {PriceComponent} from "./price/price.component";
 import {ContactComponent} from "./contact/contact.component";
 import {SigninComponent} from "./signin/signin.component";
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -28,7 +29,8 @@ const routes: Routes = [
     path: "tester",
     component: TestComponent,
   },
-
+  {path: "connexion",
+  component: LoginComponent,},
 
   {
     path: "prix",

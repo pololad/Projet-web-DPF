@@ -17,6 +17,7 @@ export class NavbarComponent {
     this.links.push({name:"Tarifs", href: "prix"})
     this.links.push({name:"Mails", href: "cont"})
     this.links.push({name:"Sign",href:"signin"})
+    this.links.push({name:"log",href:"connexion"})
   }
 }
 

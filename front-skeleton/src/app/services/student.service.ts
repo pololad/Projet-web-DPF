@@ -48,4 +48,11 @@ export class StudentService {
     }
     return student
   }
+  authenticate(username: string, password: string): Observable<Student> {
+    // Construire le corps de la requête pour l'authentification
+    const body = { username, password };
+  
+    // Envoyer une requête POST au backend pour l'authentification
+    return this.http.post<Student>(`${this.studentsUrl}/authenticate`, body);
+  }
 }
