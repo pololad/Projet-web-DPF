@@ -1,4 +1,3 @@
-
 import {Student} from "./student.model";
 
 export interface Status {
@@ -6,3 +5,4 @@ export interface Status {
   name: string
   students: Student[]
 }
+
