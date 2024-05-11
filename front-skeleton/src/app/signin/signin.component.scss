@@ -16,8 +16,8 @@
   background-color: #f9f9f9;
 }
 
-/* Styles pour le formulaire de connexion */
-.form {
+/* Styles pour le formulaire de paiement */
+.payment-form {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
@@ -26,18 +26,18 @@
 }
 
 /* Styles pour le titre du formulaire */
-.form__title {
+.form-title {
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
 }
 
 /* Styles pour les champs de saisie */
-.form__input-group {
+.form-input-group {
   margin-bottom: 15px;
 }
 
-.form__input {
+.form-input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -45,8 +45,8 @@
   font-size: 14px;
 }
 
-/* Styles pour le bouton de connexion */
-.form__button {
+/* Styles pour le bouton de paiement */
+.form-button {
   width: 100%;
   padding: 10px;
   background-color: #007bff;
@@ -58,16 +58,7 @@
   transition: background-color 0.3s ease;
 }
 
-.form__button:hover {
+.form-button:hover {
   background-color: #0056b3;
 }
 
-/* Styles pour les liens */
-.form__link {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.form__link:hover {
-  text-decoration: underline;
-}

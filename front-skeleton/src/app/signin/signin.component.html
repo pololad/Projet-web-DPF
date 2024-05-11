@@ -3,30 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page de Connexion</title>
+  <title>Formulaire de Paiement</title>
   <link rel="stylesheet" href="signin.component.scss">
 </head>
 <body>
 <div class="container">
-  <form class="form" id="login">
-    <h1 class="form__title">Connexion</h1>
-    <div class="form__input-group">
-      <input type="text" class="form__input" autofocus placeholder="Nom d'utilisateur ou email">
-      <div class="form__input-error-message"></div>
+  <form class="payment-form">
+    <h1 class="form-title">Paiement par Carte Bleue</h1>
+    <div class="form-input-group">
+      <input type="text" class="form-input" placeholder="Nom du titulaire de la carte">
     </div>
-    <div class="form__input-group">
-      <input type="password" class="form__input" autofocus placeholder="Mot de passe">
-      <div class="form__input-error-message"></div>
+    <div class="form-input-group">
+      <input type="text" class="form-input" placeholder="Numéro de carte">
     </div>
-    <button class="form__button" type="submit">Continuer</button>
-    <p class="form__text">
-      <a href="#" class="form__link">Mot de passe oublié ?</a>
-    </p>
-    <p class="form__text">
-      <a class="form__link" href="#">Pas encore de compte ?</a>
-    </p>
+    <div class="form-input-group">
+      <input type="text" class="form-input" placeholder="Date d'échéance">
+      <input type="text" class="form-input" placeholder="Code CVV">
+    </div>
+    <div class="form-input-group">
+      <input type="text" class="form-input" placeholder="Adresse de facturation">
+      <input type="text" class="form-input" placeholder="Ville">
+      <select class="form-input">
+        <option value="France">France</option>
+        <!-- Ajoutez d'autres options de pays ici -->
+      </select>
+    </div>
+    <button class="form-button" type="submit">Payer</button>
   </form>
 </div>
 </body>
 </html>
+
 
