@@ -1,10 +1,34 @@
-<!-- login.component.html -->
-<form (submit)="authenticate()">
-  <label for="username">Username:</label>
-  <input type="text" id="username" [(ngModel)]="username" name="username" required>
 
-  <label for="password">Password:</label>
-  <input type="password" id="password" [(ngModel)]="password" name="password" required>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <button type="submit">Login</button>
-</form>
+  <title>Page de Connexion</title>
+  <link rel="stylesheet" href="login.component.scss">
+</head>
+<body>
+<div class="container">
+  <form class="login-form">
+    <h1 class="form-title">Connexion</h1>
+    <div class="form-input-group">
+      <input type="text" class="form-input" autofocus placeholder="Nom d'utilisateur ou email">
+      <div class="form-input-error-message"></div>
+    </div>
+    <div class="form-input-group">
+      <input type="password" class="form-input" autofocus placeholder="Mot de passe">
+      <div class="form-input-error-message"></div>
+    </div>
+    <button class="form-button" type="submit">Se Connecter</button>
+    <p class="form-text">
+      <a href="#" class="form-link">Mot de passe oublié ?</a>
+    </p>
+    <p class="form-text">
+      <a class="form-link" href="#">Pas encore de compte ?</a>
+    </p>
+  </form>
+</div>
+
+</body>
+</html>
