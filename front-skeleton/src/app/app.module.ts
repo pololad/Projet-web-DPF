@@ -23,6 +23,21 @@ import {ContactComponent} from "./contact/contact.component";
 import {SigninComponent} from "./signin/signin.component";
 import {LoginComponent} from "./login/login.component";
 import {SelectionComponent} from "./Selection/selection";
+import {SelectioninterComponent} from "./selectioninter/selectioninter.component";
+import {SelectionexpertComponent} from "./selectionexpert/selectionexpert.component";
+import {SelectioninitComponent} from "./selectioninit/selectioninit.component";
+import {Formationinter1Component} from "./formationinter1/formationinter1.component";
+import {Formationinter2Component} from "./formationinter2/formationinter2.component";
+import {Formationinter3Component} from "./formationinter3/formationinter3.component";
+import {Formationexpert1Component} from "./formationexpert1/formationexpert1.component";
+import {Formationexpert3Component} from "./formationexpert3/formationexpert3.component";
+import {Formationexpert2Component} from "./formationexpert2/formationexpert2.component";
+import {Formationinit1Component} from "./formationinit1/formationinit1.component";
+import {Formationinit2Component} from "./formationinit2/formationinit2.component";
+import {Formationinit3Component} from "./formationinit3/formationinit3.component";
+import {ReglementexpertComponent} from "./reglementexpert/reglementexpert.component";
+import {ReglementinitComponent} from "./reglementinit/reglementinit.component";
+import {ReglementinterComponent} from "./reglementinter/reglementinter.component";
 
 @NgModule({
   declarations: [
@@ -40,7 +55,22 @@ import {SelectionComponent} from "./Selection/selection";
     PriceComponent,
     ContactComponent,
     SigninComponent,
-    LoginComponent
+    LoginComponent,
+    SelectioninterComponent,
+    SelectionexpertComponent,
+    SelectioninitComponent,
+    Formationinter1Component,
+    Formationinter2Component,
+    Formationinter3Component,
+    Formationexpert1Component,
+    Formationexpert2Component,
+    Formationexpert3Component,
+    Formationinit1Component,
+    Formationinit2Component,
+    Formationinit3Component,
+    ReglementexpertComponent,
+    ReglementinitComponent,
+    ReglementinterComponent
   ],
   imports: [
     BrowserModule,
