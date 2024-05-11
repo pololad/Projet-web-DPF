@@ -49,16 +49,7 @@ export class StudentService {
     return student
   }
 
-  setCurrentStudent(student: Student | null): void {
-    this.currentStudentSubject.next(student);
-  }
 
-  getCurrentStudent(): Observable<Student | null> {
-    return this.currentStudentSubject.asObservable();
-  }
 
-  authenticate(username: string, password: string): Observable<Student> {
-    const body = { username, password };
-    return this.http.post<Student>(`${this.studentsUrl}/authenticate`, body);
-  }
+
 }
