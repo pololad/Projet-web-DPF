@@ -19,7 +19,7 @@ export class StudentsComponent {
     this.studentService.delete(student).subscribe(() => this.router.navigate(["students"]))
   }
 
-  searchByMajorAndCourse($event: Observable<Student[]>) {
+  searchByStatusAndOffer($event: Observable<Student[]>) {
     this.students$ = $event
   }
 }

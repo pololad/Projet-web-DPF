@@ -1,31 +1,31 @@
-import { Component } from '@angular/core';
-import { Student } from '../models/student.model';
-import { StudentService } from '../services/student.service';
+import { Component } from "@angular/core"
+import { Router } from "@angular/router"
+import { Student } from "models/student.model"
+import { StudentService } from "services/student.service"
 
 @Component({
-  selector: 'login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: "login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.scss"],
 })
 export class LoginComponent {
-  username: string = '';
-  password: string = '';
-  student: Student | null = null;
+  username: string = ""
+  password: string = ""
+  client: Student | null = null
+  loginSuccess: boolean = true // Variable pour suivre l'état de la connexion
 
-  constructor(private studentService: StudentService) {}
+  constructor(private studentService: StudentService, private router: Router) {}
 
-  login() {
-    // Appeler le service pour vérifier les informations de connexion
-    this.studentService.authenticate(this.username, this.password).subscribe(
-      (response: Student) => {
-        this.student = response;
-        console.log('Connecté avec succès !', this.student);
-        // Redirection vers une autre page ou traitement supplémentaire
-      },
-      (error) => {
-        console.error('Erreur de connexion :', error);
-        // Afficher un message d'erreur à l'utilisateur
+  authenticate(): void {
+    this.studentService.authenticate(this.username, this.password).subscribe((student) => {
+      if (student) {
+        this.client = student
+        this.loginSuccess = true // Connexion réussie
+        // Rediriger vers une autre page après l'authentification réussie
+        this.router.navigate(["/dashboard"])
+      } else {
+        this.loginSuccess = false // Connexion échouée
       }
-    );
+    })
   }
 }

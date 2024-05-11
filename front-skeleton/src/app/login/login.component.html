@@ -1,12 +1,10 @@
-<h2>Connexion</h2>
-<form (ngSubmit)="login()">
-  <div>
-    <label for="username">Nom d'utilisateur :</label>
-    <input type="text" id="username" name="username" [(ngModel)]="username" required>
-  </div>
-  <div>
-    <label for="password">Mot de passe :</label>
-    <input type="password" id="password" name="password" [(ngModel)]="password" required>
-  </div>
-  <button type="submit">Se connecter</button>
+<!-- login.component.html -->
+<form (submit)="authenticate()">
+  <label for="username">Username:</label>
+  <input type="text" id="username" [(ngModel)]="username" name="username" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" [(ngModel)]="password" name="password" required>
+
+  <button type="submit">Login</button>
 </form>
