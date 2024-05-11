@@ -21,7 +21,6 @@ import {FormationComponent} from "./formation/formation.component";
 import {PriceComponent} from "./price/price.component";
 import {ContactComponent} from "./contact/contact.component";
 import {SigninComponent} from "./signin/signin.component";
-import {botbarComponent} from "./botbar/botbar.component";
 import {LoginComponent} from "./login/login.component";
 
 @NgModule({
@@ -39,7 +38,6 @@ import {LoginComponent} from "./login/login.component";
     PriceComponent,
     ContactComponent,
     SigninComponent,
-    botbarComponent,
     LoginComponent
   ],
   imports: [
