@@ -20,6 +20,8 @@ import {AboutComponent} from "./about/about.component";
 import {FormationComponent} from "./formation/formation.component";
 import {PriceComponent} from "./price/price.component";
 import {ContactComponent} from "./contact/contact.component";
+import {SigninComponent} from "./signin/signin.component";
+import {botbarComponent} from "./botbar/botbar.component";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {ContactComponent} from "./contact/contact.component";
     FormationComponent,
     PriceComponent,
     ContactComponent,
-
+    SigninComponent,
+    botbarComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ import {Link} from "../models/links.model";
   templateUrl: "./test.component.html",
   styleUrls: ["./test.component.scss"],
 })
-export class TestComponent implements OnInit {
+export class TestComponent {
   links: Link[] = []
 
 
@@ -19,5 +19,5 @@ export class TestComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {}
+
 }

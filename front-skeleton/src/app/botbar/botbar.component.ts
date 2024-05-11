@@ -5,11 +5,11 @@ import { ActivatedRoute, Router } from "@angular/router"
 import { StudentService } from "services/student.service"
 import {Link} from "../models/links.model";
 @Component({
-  selector: "formation",
-  templateUrl: "./formation.component.html",
-  styleUrls: ["./formation.component.scss"],
+  selector: "botbar",
+  templateUrl: "./botbar.component.html",
+  styleUrls: ["./botbar.component.scss"],
 })
-export class FormationComponent {
+export class botbarComponent {
   links: Link[] = []
 
 

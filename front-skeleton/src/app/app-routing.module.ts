@@ -14,6 +14,7 @@ import {AboutComponent} from "./about/about.component";
 import {FormationComponent} from "./formation/formation.component";
 import {PriceComponent} from "./price/price.component";
 import {ContactComponent} from "./contact/contact.component";
+import {SigninComponent} from "./signin/signin.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -28,10 +29,7 @@ const routes: Routes = [
     component: TestComponent,
   },
 
-  {
-    path: "apropos",
-    component: AboutComponent,
-  },
+
   {
     path: "prix",
     component: PriceComponent,
@@ -40,6 +38,9 @@ const routes: Routes = [
     path: "cont",
     component: ContactComponent,
   },
+  {path: "signin",
+  component: SigninComponent},
+
   {
     path: "formations",
     component: FormationComponent,

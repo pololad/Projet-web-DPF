@@ -1,10 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>teste des formations </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma page</title>
+  <link href="formation.component.scss" rel="stylesheet">
 </head>
 <body>
-<div>test ça fonctionne mdr</div>
+<div class="gradient-background">
+  <h1 class="centerh1">CyberTrain</h1>
+
+
+  <h2 class="card-text2">Bienvenue sur CyberTrain : Votre Voyage vers la Cybersécurité</h2>
+
+
+  <h3 class="card-text2">À propos de CyberTrain
+    <p>
+      <br>CyberTrain est votre plateforme de formation en ligne spécialisée dans le domaine de la cybersécurité. Que vous soyez débutant ou expert, nous avons des formats adaptés à tous les niveaux pour vous aider à renforcer vos compétences et à protéger les systèmes d’information.<br/>
+      <br>Nos Modules de Formation<br/>
+
+      <br>Introduction à la Cybersécurité (23 h 40 min) :
+      Découvrez les fondamentaux de la cybersécurité, les risques et les enjeux pour les systèmes d’information.
+      Explorez la vision de Cisco d’un point de vue américain.<br/>
+
+      <br>Normes & Réglementation (4 h 35 min) :
+      Plongez-vous dans les normes et règlementations du domaine cyber, avec un focus sur la norme ISO27K et le RGPD.<br/>
+
+      <br>Infrastructures Réseaux (17 h) :
+      Explorez les enjeux autour des infrastructures réseaux, du transport des informations aux chaînes d’émission et de réception.<br/></p></h3>
+</div>
+<div class="centerp1"><br>Site web de Formations en Cybersécurité de tout niveaux<br/></div>
+<div class="paddingtest"></div>
+<div class="formationhomeimage">
+  <ul>
+    <li>
+      <div class="imageContainer">
+        <div class="imageText"><br>Sensibilisation à la Cybersécurité<br/></div>
+        <img mat-list-item routerLink="{{ links[0].href }}" routerLinkActive="active" src="assets/ima/imageCyber.jpg" alt="Sensibilisation à la Cybersécurité">
+      </div>
+    </li>
+    <li>
+      <div class="imageContainer">
+        <div class="imageText"><br>Sensibilisation au RGPD<br/></div>
+
+        <img  routerLink="/etudiants" routerLinkActive="active" src="assets/ima/imageRGPD.jpg" alt="Sensibilisation au RGPD">
+
+      </div>
+    </li>
+    <li>
+      <div class="imageContainer">
+        <div class="imageText"><br>Sensibilisation au Pentest<br/></div>
+        <img routerLink="{{ links[2] }}" routerLinkActive="active" src="assets/ima/imagePentest.jpg" alt="Sensibilisation au Pentest">
+      </div>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <div class="imageContainer">
+        <div class="imageText">
+          Formation sur le RGPD (Règlement Général sur la Protection des Données) : Le RGPD est essentiel dans un monde où les données personnelles sont une ressource cruciale. Notre programme de sensibilisation du personnel vise à éduquer et responsabiliser chaque membre de votre équipe quant à sa contribution essentielle à la protection des données. En comprenant les fondements du RGPD, la définition des données personnelles, les traitements, et bien plus encore, vos collaborateurs deviendront les gardiens vigilants des informations sensibles. Chez CSM, nous proposons une formation adaptée à vos besoins spécifiques, documentant ainsi la conformité et renforçant la confiance de vos clients et partenaires1.
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="imageContainer">
+        <div class="imageText">
+          Formation au Pentest (Tests d’intrusion) : Devenez un expert en sécurité en apprenant à identifier les vulnérabilités dans les systèmes informatiques. Notre formation vous permettra d’appliquer une méthodologie de test d’intrusion claire et reproductible, de concevoir des outils d’intrusion et d’identifier les différentes vulnérabilités. Vous serez capable de remonter et restituer les failles détectées, fournissant ainsi des mesures de sécurité pour corriger les points faibles de l’organisation. Préparez-vous à passer la certification "Réaliser des tests d’intrusion (Sécurité Pentesting)".
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="imageContainer">
+        <div class="imageText">
+          Formation à la Sensibilisation à la Cybersécurité : Protégez-vous des attaquants et de leurs techniques grâce à notre formation en ligne gratuite. Nous vous proposons une formation entièrement en ligne pour rendre la cybersécurité accessible à tous. Vous apprendrez à connaître les risques sur Internet, à sécuriser vos données et à devenir acteur de la sécurité numérique. Les modules abordent des sujets tels que l’authentification, les bons réflexes sur Internet et la sécurité omniprésente. Obtenez une attestation de réussite en validant progressivement les crédits attribués à chaque unité.
+        </div>
+      </div>
+    </li>
+  </ul>
+  <h2 class="centerp1"><br>Nos Valeurs<br/></h2>
+  <h3 class="centerh2">
+    <p>
+      <br>Flexibilité : Apprenez à votre rythme, où que vous soyez.<br/>
+      <br>Expertise : Nos formateurs sont des professionnels chevronnés du domaine.<br/>
+      <br>Certification : Préparez-vous pour des certifications reconnues.<br/>
+
+    </p></h3>
+  <br><h2 class="card-text2">Rejoignez-nous dès aujourd’hui et embarquez pour un voyage passionnant dans le monde de la cybersécurité !</h2><br/>
+</div>
+
+
 </body>
 </html>
