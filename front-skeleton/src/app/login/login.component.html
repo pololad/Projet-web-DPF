@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,14 +10,16 @@
 </head>
 <body>
 <div class="container">
-  <form class="form" id="login">
+  <form class="form" id="login"  (ngSubmit)="authenticate()">
     <h1 class="form__title">Connexion</h1>
     <div class="form__input-group">
-      <input type="text" class="form__input" autofocus placeholder="Nom d'utilisateur ou email">
+      <input type="text"  name="username" [(ngModel)]="username" class="form__input" placeholder="Username">
+
       <div class="form__input-error-message"></div>
     </div>
     <div class="form__input-group">
-      <input type="password" class="form__input" autofocus placeholder="Mot de passe">
+      <input type="password" [(ngModel)]="password" name="password" class="form__input" placeholder="password">
+
       <div class="form__input-error-message"></div>
     </div>
     <button class="form__button" type="submit">Continuer</button>
@@ -29,5 +33,3 @@
 </div>
 </body>
 </html>
-
-

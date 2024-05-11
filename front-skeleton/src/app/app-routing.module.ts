@@ -16,6 +16,21 @@ import {PriceComponent} from "./price/price.component";
 import {ContactComponent} from "./contact/contact.component";
 import {SigninComponent} from "./signin/signin.component";
 import {LoginComponent} from "./login/login.component";
+import {Formationinter1Component} from "./formationinter1/formationinter1.component";
+import {Formationinter2Component} from "./formationinter2/formationinter2.component";
+import {Formationinter3Component} from "./formationinter3/formationinter3.component";
+import {Formationinit1Component} from "./formationinit1/formationinit1.component";
+import {Formationinit2Component} from "./formationinit2/formationinit2.component";
+import {Formationinit3Component} from "./formationinit3/formationinit3.component";
+import {Formationexpert1Component} from "./formationexpert1/formationexpert1.component";
+import {Formationexpert2Component} from "./formationexpert2/formationexpert2.component";
+import {Formationexpert3Component} from "./formationexpert3/formationexpert3.component";
+import {SelectioninitComponent} from "./selectioninit/selectioninit.component";
+import {SelectioninterComponent} from "./selectioninter/selectioninter.component";
+import {SelectionexpertComponent} from "./selectionexpert/selectionexpert.component";
+import {ReglementinitComponent} from "./reglementinit/reglementinit.component";
+import {ReglementinterComponent} from "./reglementinter/reglementinter.component";
+import {ReglementexpertComponent} from "./reglementexpert/reglementexpert.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -54,7 +69,7 @@ const routes: Routes = [
       student: StudentDetailsResolver,
     },
   },
-  
+
   {
     path: "selection",
     component: StatusesComponent,
@@ -68,6 +83,75 @@ const routes: Routes = [
     resolve: {
       studentsFromMajor: StatusStudentsResolver,
     },
+  },
+  {
+    path: "formationinter1",
+    component: Formationinter1Component,
+  },
+  {
+    path: "formationinter2",
+    component: Formationinter2Component,
+  },
+  {
+    path: "formationinter3",
+    component: Formationinter3Component,
+  },
+  {
+    path: "formationinit1",
+    component: Formationinit1Component,
+  },
+
+  {
+    path: "formationinit2",
+    component: Formationinit2Component,
+  },
+
+  {
+    path: "formationinit3",
+    component: Formationinit3Component,
+  },
+
+  {
+    path: "formationexpert1",
+    component: Formationexpert1Component,
+  },
+
+  {
+    path: "formationexpert2",
+    component: Formationexpert2Component,
+  },
+
+  {
+    path: "formationexpert3",
+    component: Formationexpert3Component,
+  },
+
+  {
+    path: "selectioninit",
+    component: SelectioninitComponent,
+  },
+  {
+    path: "selectioninter",
+    component: SelectioninterComponent,
+  },
+  {
+    path: "selectionexpert",
+    component: SelectionexpertComponent,
+  },
+
+  {
+    path: "reglementinit",
+    component: ReglementinitComponent,
+  },
+
+  {
+    path: "reglementinter",
+    component: ReglementinterComponent,
+  },
+
+  {
+    path: "reglementexpert",
+    component: ReglementexpertComponent,
   },
 ]
 
