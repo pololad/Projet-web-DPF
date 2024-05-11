@@ -22,6 +22,7 @@ import {PriceComponent} from "./price/price.component";
 import {ContactComponent} from "./contact/contact.component";
 import {SigninComponent} from "./signin/signin.component";
 import {LoginComponent} from "./login/login.component";
+import {SelectionComponent} from "./Selection/selection";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {LoginComponent} from "./login/login.component";
     PriceComponent,
     ContactComponent,
     SigninComponent,
-    LoginComponent
+    LoginComponent,
+    SelectionComponent
   ],
   imports: [
     BrowserModule,

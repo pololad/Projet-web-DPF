@@ -62,6 +62,13 @@ const routes: Routes = [
     },
   },
   {
+    path: "selection",
+    component: StatusesComponent,
+    resolve: {
+      majors: StatusesResolver,
+    },
+  },
+  {
     path: "status-etudiants/:id",
     component: StatusStudentsComponent,
     resolve: {

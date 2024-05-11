@@ -18,6 +18,7 @@ export class NavbarComponent {
     this.links.push({name:"Mails", href: "cont"})
     this.links.push({name:"Sign",href:"signin"})
     this.links.push({name:"Login",href:"connexion"})
+    this.links.push({name:"Selection",href:"selection"})
   }
 }
 
