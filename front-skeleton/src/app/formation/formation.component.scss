@@ -14,8 +14,8 @@ body, html {
   margin : 30px;
 }
 .navbar {
-  background-color: #000; // Fond noir
-  color: #fff; // Texte blanc
+  background-color: #000;
+  color: #fff;
   border-radius: 20px;
 
   ul {
@@ -36,14 +36,14 @@ body, html {
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #333; // Fond légèrement plus sombre au survol
+          background-color: #333;
         }
       }
     }
   }
 }
 
-/* Autres styles restent inchangés */
+
 .centerh1 {
   text-align: center;
   background-color: #000;
@@ -136,8 +136,8 @@ body, html {
   .imageText {
     padding-bottom: 20px;
     padding-top: 20px;
-    max-width: 80%; // Limite la largeur du texte à 80% de la largeur du conteneur
-    margin: 0 auto; // Centre le texte horizontalement
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 .centerh2 {

@@ -1,12 +1,10 @@
 
-/* Réinitialisation des styles par défaut */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Styles pour le conteneur de la page */
 .container {
   display: flex;
   justify-content: center;
@@ -15,7 +13,6 @@
   background-color: #f9f9f9;
 }
 
-/* Styles pour le formulaire de connexion */
 .form {
   background-color: #ffffff;
   padding: 20px;
@@ -24,14 +21,12 @@
   width: 300px;
 }
 
-/* Styles pour le titre du formulaire */
 .form__title {
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Styles pour les champs de saisie */
 .form__input-group {
   margin-bottom: 15px;
 }
@@ -44,7 +39,6 @@
   font-size: 14px;
 }
 
-/* Styles pour le bouton de connexion */
 .form__button {
   width: 100%;
   padding: 10px;
@@ -61,7 +55,6 @@
   background-color: #0056b3;
 }
 
-/* Styles pour les liens */
 .form__link {
   color: #007bff;
   text-decoration: none;

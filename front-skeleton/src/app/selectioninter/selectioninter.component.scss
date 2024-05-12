@@ -1,13 +1,10 @@
-/* styles.css */
 
-/* Réinitialisation des styles par défaut */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Styles pour le conteneur de la page */
 .container {
   display: flex;
   justify-content: center;
@@ -16,7 +13,6 @@
   background-color: #ffffff;
 }
 
-/* Styles pour la section de formation */
 .training-section {
   background-color: #6a0f59;
   color: #ffffff;
@@ -26,14 +22,12 @@
   width: 400px;
 }
 
-/* Styles pour le titre de la formation */
 .training-title {
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Styles pour les boutons */
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -49,7 +43,6 @@
   cursor: pointer;
 }
 
-/* Styles pour la section CyberTraining */
 .cybertraining-section {
   background-color: #eac7f9;
   padding: 20px;
@@ -59,19 +52,16 @@
   margin-top: 20px;
 }
 
-/* Styles pour le titre de la section CyberTraining */
 .cybertraining-title {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-/* Styles pour les détails de la formation */
 .cybertraining-details {
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-/* Styles pour la liste des fonctionnalités */
 .features {
   list-style: none;
   margin-bottom: 20px;
@@ -81,7 +71,6 @@
   margin-bottom: 5px;
 }
 
-/* Styles pour le bouton de téléchargement du programme */
 .download-program {
   background-color: #007bff;
   color: #fff;
