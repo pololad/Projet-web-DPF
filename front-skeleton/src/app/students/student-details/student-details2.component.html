@@ -1,0 +1,52 @@
+@if (student$ | async; as student) {
+  <h1>Selection offre(s) du client</h1>
+  <form (ngSubmit)="save(student)" #studentForm="ngForm">
+
+    <div class="student-offers">
+      <div class="d-flex align-items-center">
+        <h3 class="offers-title">Offre</h3>
+        <button type="button" mat-mini-fab color="primary" (click)="offerClick()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      @if (allOffers$ | async; as allOffers) {
+        <div class="form-group">
+          <label for="offers">offres disponibles</label>
+          <select id="offers" [(ngModel)]="offerSelectModel" name="offers" class="form-control">
+            <option [ngValue]="null" [disabled]="true">Sélectionner une offre</option>
+            @for (offer of allOffers; track offer) {
+              <option [ngValue]="offer"> difficulté: {{offer.difficulty}}</option>
+            }
+          </select>
+          @if (notSelectedOffer) {
+            <div class="alert alert-danger">L'offre est obligatoire</div>
+          }
+          <button
+            type="button"
+            [disabled]="offerSelectModel == null"
+            (click)="addOfferToStudent(student)"
+            mat-raised-button
+            color="primary"
+          >
+            Ajouter une offre
+          </button>
+        </div>
+      }
+      <table class="table">
+        <tbody>
+          @for (offer of student.offers; track offer) {
+            <tr>
+              <td>{{ offer?.difficulty }}</td>
+              <td>
+                <button mat-icon-button color="warn" (click)="removeOfferToStudent(student, offer)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <button routerLink="/" type="submit" mat-raised-button color="primary" [disabled]="!studentForm.form.valid">Enregistrer</button>
+  </form>
+}

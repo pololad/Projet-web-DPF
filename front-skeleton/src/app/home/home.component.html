@@ -37,7 +37,13 @@
     <p>Débutez votre parcours selon votre niveau. En 1ère étape de votre formation, vous réalisez un test de positionnement qui définit votre point de départ sur le parcours.</p>
   </div>
 </div>
+<div>
+  <div *ngIf="(currentStudent$ | async) as currentStudent">
+    <h1>Bienvenue, {{ currentStudent.firstName }} {{ currentStudent.lastName }}</h1>
+    <!-- Afficher d'autres détails de l'étudiant ici -->
+  </div>
 
+</div>
 </body>
 </html>
 

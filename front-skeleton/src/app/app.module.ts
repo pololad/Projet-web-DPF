@@ -38,6 +38,7 @@ import {Formationinit3Component} from "./formationinit3/formationinit3.component
 import {ReglementexpertComponent} from "./reglementexpert/reglementexpert.component";
 import {ReglementinitComponent} from "./reglementinit/reglementinit.component";
 import {ReglementinterComponent} from "./reglementinter/reglementinter.component";
+import {StudentDetails2Component} from "./students/student-details/student-details2.component";
 
 
 @NgModule({
@@ -72,6 +73,7 @@ import {ReglementinterComponent} from "./reglementinter/reglementinter.component
     ReglementexpertComponent,
     ReglementinitComponent,
     ReglementinterComponent,
+    StudentDetails2Component
 
   ],
   imports: [

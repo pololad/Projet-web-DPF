@@ -32,6 +32,8 @@ import {ReglementinitComponent} from "./reglementinit/reglementinit.component";
 import {ReglementinterComponent} from "./reglementinter/reglementinter.component";
 import {ReglementexpertComponent} from "./reglementexpert/reglementexpert.component";
 import {SelectionComponent} from "./Selection/selection";
+import {StudentDetails2Component} from "./students/student-details/student-details2.component";
+import {StudentDetails2Resolver} from "./students/student-details/student-details2.resolver";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -70,6 +72,13 @@ const routes: Routes = [
       student: StudentDetailsResolver,
     },
   },
+  {
+    path: "details-etudiant2/:id",
+    component: StudentDetails2Component,
+    resolve: {
+      student: StudentDetails2Resolver,
+    },
+  },
 
   {
     path: "selection",
@@ -83,6 +92,7 @@ const routes: Routes = [
       studentsFromMajor: StatusStudentsResolver,
     },
   },
+
   {
     path: "formationinter1",
     component: Formationinter1Component,

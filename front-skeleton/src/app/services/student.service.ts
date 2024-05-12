@@ -51,5 +51,12 @@ export class StudentService {
 
 
 
+  setCurrentStudent(student: Student) {
+    this.currentStudentSubject.next(student);
+  }
+
+  getCurrentStudent(): Observable<Student | null> {
+    return this.currentStudentSubject.asObservable();
+  }
 
 }

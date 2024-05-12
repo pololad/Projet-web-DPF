@@ -34,7 +34,6 @@ create table status(
 
 create table offers(
     id SERIAL PRIMARY KEY,
-    name TEXT not null,
     difficulty TEXT not null,
     begin_date date null,
     ending_date date null

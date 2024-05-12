@@ -9,12 +9,12 @@ import { StatusService } from "../../services/status.service"
 import {Status} from "../../models/status.model";
 
 @Component({
-  selector: "student-details",
-  templateUrl: "./student-details.component.html",
+  selector: "student-details2",
+  templateUrl: "./student-details2.component.html",
 
   styleUrls: ["./student-details.component.scss"],
 })
-export class StudentDetailsComponent {
+export class StudentDetails2Component {
   student$: Observable<Student> = this._route.data.pipe(map((data) => data["student"]))
   allStatuses$: Observable<Status[]> | undefined
   allOffers$: Observable<Offer[]> | undefined
@@ -58,11 +58,11 @@ export class StudentDetailsComponent {
 
     if (id == "new") {
       this.studentService.create(student).subscribe(() => {
-        this.router.navigate(["/connexion"])
+        this.router.navigate(["etudiants"])
       })
     } else {
       this.studentService.update(id, student).subscribe(() => {
-        this.router.navigate(["/connexion"])
+        this.router.navigate(["etudiants"])
       })
     }
   }

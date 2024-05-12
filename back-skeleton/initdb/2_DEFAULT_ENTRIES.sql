@@ -1,14 +1,8 @@
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (1,'Sensibilisation RGPD','facile','12-12-2024','12-12-2025');
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (2,'Sensibilisation RGPD','intermédiaire','12-12-2024','12-12-2025');
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (3,'Sensibilisation RGPD','difficile','12-12-2024','12-12-2025');
+INSERT INTO offers(id, difficulty, begin_date, ending_date) VALUES (1,'initié','12-12-2024','12-12-2025');
+INSERT INTO offers(id, difficulty, begin_date, ending_date) VALUES (2,'intermédiaire','12-12-2024','12-12-2025');
+INSERT INTO offers(id,difficulty, begin_date, ending_date) VALUES (3,'expert','12-12-2024','12-12-2025');
 
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (4,'Sensibilisation Pentest','facile','12-12-2024','12-12-2025');
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (5,'Sensibilisation Pentest','intermédiaire','12-12-2024','12-12-2025');
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (6,'Sensibilisation Pentest','difficile','12-12-2024','12-12-2025');
 
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (7,'Sensibilisation cybersécurité','facile','12-12-2024','12-12-2025');
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (8,'Sensibilisation cybersécurité','intermédiaire','12-12-2024','12-12-2025');
-INSERT INTO offers(id,name, difficulty, begin_date, ending_date) VALUES (9,'Sensibilisation cybersécurité','difficile','12-12-2024','12-12-2025');
 
 INSERT INTO students (id, first_name, last_name, birthdate, status_id,password) VALUES (1, 'Paul', 'Harrohide', '2002-06-15', 3,'toto');
 INSERT INTO students (id, first_name, last_name, birthdate, status_id,password) VALUES (2, 'Jean', 'Bonbeur', '2001-08-21', 2,'toto');

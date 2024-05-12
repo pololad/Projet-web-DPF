@@ -20,7 +20,7 @@ import java.util.List;
         private String difficulty;
         private Instant begin_date;
         private Instant ending_date;
-        private String name;
+
         @ManyToMany(mappedBy = "offers")
         @JsonIgnore
         List<Student> students;

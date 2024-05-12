@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="login.component.scss">
 </head>
 <body>
+{{client?.firstName}}
 <div class="container">
   <form class="form" id="login"  (ngSubmit)="authenticate()">
     <h1 class="form__title">Connexion</h1>
@@ -24,12 +25,14 @@
     </div>
     <button class="form__button" type="submit">Continuer</button>
     <p class="form__text">
-      <a href="#" class="form__link">Mot de passe oublié ?</a>
+      <a href="cont" class="form__link">Mot de passe oublié ?</a>
     </p>
     <p class="form__text">
-      <a class="form__link" href="#">Pas encore de compte ?</a>
+      <a class="form__link" href="/details-etudiant/new">Pas encore de compte ?</a>
     </p>
+
   </form>
 </div>
+
 </body>
 </html>
